@@ -31,32 +31,56 @@
 
 
 // 2. Написать программу, которая подсчитывает количество в строке букв, пробелов, цифр и остальных символов.
-{
-    System.Console.WriteLine("Введите строку");
-    string? text = Console.ReadLine();
-    if (string.IsNullOrEmpty(text))
-    {
-        text = text?.Trim();
-        char[] textChar = new[] {text}
-        for (int i = 0; i < text?.Length; i++)
-        {
-            text = text?.Trim();
-            if (!int.TryParse(text, out int number))
-            {
-                i
-            }
-        }
-    }
-    else
-    {
-        System.Console.WriteLine("Пусто...");
-    }
-}
+// {
+//     System.Console.WriteLine("Введите строку");
+//     string? text = Console.ReadLine();
+//     text = text?.Trim();
+//     int resultString = 0;
+//     int resultSpace = 0;
+//     int resultNumber = 0;
+//     int resultOther = 0;
+//     if (!string.IsNullOrEmpty(text))
+//     {
+//         for (int i = 1; i < text?.Length; i++)
+//         {
+//             if (!char.IsDigit(text[i]))
+//             {
+//                 resultString += i;
+//                 // System.Console.WriteLine(i);
+//             }
+//             else if (string.Join(text[i]))
+//             {
+//                 resultSpace += i;
+//                 // System.Console.WriteLine(resultSpace);
+//             }
+//             // else if (int.TryParse(text, out number))
+//             // {
+//             //     resultNumber += i;
+//             // }
+//             // else
+//             // {
+//             //     resultOther += 1;
+//             // }
+//         }
 
-// 3. Пользователь вводит символ. Записать все позиции данного данного символа в строке в массив и вывести через символ, который кажет пользователь.
+//         // System.Console.WriteLine($"Колличество букв: {resultString}");
+//         // , колличество пробелов: {resultSpace}, колличество цтфр: {resultNumber}, Колличество букв: {resultOther}");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("Пусто...");
+//     }
+// }
+
+// 3. Пользователь вводит символ. Записать все позиции данного данного символа в строке в массив и вывести через символ, который cкажет пользователь.
 
 
 // 4. Пользователь вводит число N, которое является индексом последнего элемента ряда Фиббоначи. Вывести весь этот ряд записанный в массив.
+// System.Console.WriteLine("Введите индекс последнего элемента ряда Фибоначчи");
+// Char? simbol = Convert.ToChar(Console.ReadLine());
+int number = int.Parse(Console.ReadLine);
+for(int i = 0; i ==1 ;i++)
+// int[] fibonachi = new 
 
 
 // 5. У пользователя есть строка, удалить из неё все числа и символы ‘.’, ‘-’, ‘,’ , ‘*’ и тд. Заменить пробелы символом ‘/’.
