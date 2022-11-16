@@ -1,0 +1,15 @@
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/TaskLoop.csproj.AssemblyReference.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/TaskLoop.GeneratedMSBuildEditorConfig.editorconfig
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/TaskLoop.AssemblyInfoInputs.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/TaskLoop.AssemblyInfo.cs
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/TaskLoop.csproj.CoreCompileInputs.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/bin/Debug/net6.0/TaskLoop
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/bin/Debug/net6.0/TaskLoop.deps.json
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/bin/Debug/net6.0/TaskLoop.runtimeconfig.json
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/bin/Debug/net6.0/TaskLoop.dll
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/bin/Debug/net6.0/TaskLoop.pdb
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/TaskLoop.dll
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/refint/TaskLoop.dll
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/TaskLoop.pdb
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/TaskLoop.genruntimeconfig.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskLoop/obj/Debug/net6.0/ref/TaskLoop.dll
