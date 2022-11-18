@@ -37,43 +37,79 @@
 // }
 
 // 2. Написать программу, которая подсчитывает количество в строке букв, пробелов, цифр и остальных символов.
+// {
+//     System.Console.WriteLine("Введите строку");
+//     string? text = Console.ReadLine();
+//     int resultString = 0;
+//     int resultSpace = 0;
+//     int resultNumber = 0;
+//     int resultOther = 0;
+//     if (!string.IsNullOrEmpty(text))
+//     {
+//         for (int i = 0; i < text?.Length; i++)
+//         {
+//             if (char.IsLetter(text[i]))
+//             {
+//                 resultString += i;
+//             }
+//             else if (char.IsNumber(text[i]))
+//             {
+//                 resultNumber += i;
+//             }
+//             else if (char.IsWhiteSpace(text[i]))
+//             {
+//                 resultSpace += i;
+//             }
+//             else
+//             {
+//                 resultOther += 1;
+//             }
+//         }
+//         System.Console.WriteLine($"Колличество букв: {resultString}, колличество пробелов: {resultSpace}, колличество цифр: {resultNumber}, другие символы: {resultOther}");
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("Пусто...");
+//     }
+// }
+
+
+// 3. Пользователь вводит символ. Записать все позиции данного данного символа в строке в массив и вывести через символ, который cкажет пользователь.
 {
-    System.Console.WriteLine("Введите строку");
+    System.Console.WriteLine("введите строку");
     string? text = Console.ReadLine();
-    int resultString = 0;
-    int resultSpace = 0;
-    int resultNumber = 0;
-    int resultOther = 0;
+    System.Console.WriteLine("введите символ");
+    char? symbol = Convert.ToChar(Console.ReadLine());
+    // System.Console.WriteLine("Введите символ, через который хотите вывести массив");
+    // string? sign = Console.ReadLine();
+    string index = "";
     if (!string.IsNullOrEmpty(text))
     {
-        for (int i = 0; i < text?.Length; i++)
-        { 
-            if (char.IsLetter(text[i]))
+        if (!string.IsNullOrEmpty(Convert.ToString(symbol)))
+        {
+            System.Console.WriteLine("Введите символ, через который хотите вывести массив");
+            string? sign = Console.ReadLine();
+            for (int i = 0; i < text.Length; i++)
             {
-                resultString += i;
+                if (symbol == text[i])
+                {
+                    index =string.Join( Convert.ToString(i), sign);
+                    // index = String.Concat($"{index}", Convert.ToString(i), sign);
+                }
             }
-             else if (char.IsNumber(text[i]))
-            {
-                resultNumber += i;
-            }
-             else if (string.IsNullOrEmpty(Convert.ToString(text[i])))
-            {
-                resultSpace += i;
-            }
-            else
-            {
-                resultOther += 1;
-            }
+            // System.Console.WriteLine(string.Join(sign, index));
+            System.Console.WriteLine(index);
         }
-        System.Console.WriteLine($"Колличество букв: {resultString}, колличество пробелов: {resultSpace}, колличество цифр: {resultNumber}, другие символы: {resultOther}");
+        else
+        {
+            System.Console.WriteLine(("Тут тоже пусто..."));
+        }
     }
     else
     {
-        System.Console.WriteLine("Пусто...");
+        System.Console.WriteLine(("Пусто..."));
     }
 }
-
-// 3. Пользователь вводит символ. Записать все позиции данного данного символа в строке в массив и вывести через символ, который cкажет пользователь.
 
 
 // 4. Пользователь вводит число N, которое является индексом последнего элемента ряда Фиббоначи. Вывести весь этот ряд записанный в массив.
