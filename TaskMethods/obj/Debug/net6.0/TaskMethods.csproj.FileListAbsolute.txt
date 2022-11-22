@@ -1,0 +1,15 @@
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/bin/Debug/net6.0/TaskMethods
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/bin/Debug/net6.0/TaskMethods.deps.json
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/bin/Debug/net6.0/TaskMethods.runtimeconfig.json
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/bin/Debug/net6.0/TaskMethods.dll
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/bin/Debug/net6.0/TaskMethods.pdb
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/TaskMethods.csproj.AssemblyReference.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/TaskMethods.GeneratedMSBuildEditorConfig.editorconfig
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/TaskMethods.AssemblyInfoInputs.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/TaskMethods.AssemblyInfo.cs
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/TaskMethods.csproj.CoreCompileInputs.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/TaskMethods.dll
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/refint/TaskMethods.dll
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/TaskMethods.pdb
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/TaskMethods.genruntimeconfig.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskMethods/obj/Debug/net6.0/ref/TaskMethods.dll

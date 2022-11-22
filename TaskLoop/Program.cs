@@ -36,12 +36,12 @@
 //     //аналогична int.TryParse(items[1].ToString(), out int number1) ? number1 : default; 
 //     //TryParse не может принимать тип object для этого приводим элемент массива к строке 
 //     //используя метод *.ToString() который является базовым для всех типов данных 
-//     difference -= items[index++] is int number0 ? number0 : default;
-//     difference -= items[index++] is int number1 ? number1 : default;
-//     difference -= items[index++] is int number2 ? number2 : default;
-//     difference -= items[index++] is int number3 ? number3 : default;
-//     difference -= items[index++] is int number4 ? number4 : default;
-//     difference -= items[index++] is int number5 ? number5 : default;
+    // difference -= items[index++] is int number0 ? number0 : default;
+    // difference -= items[index++] is int number1 ? number1 : default;
+    // difference -= items[index++] is int number2 ? number2 : default;
+    // difference -= items[index++] is int number3 ? number3 : default;
+    // difference -= items[index++] is int number4 ? number4 : default;
+    // difference -= items[index++] is int number5 ? number5 : default;
 //     // Перепишем через цикл for
 //     object[] items = new object[6] { 48, -43, -41, -19, 95, 43 };
 //     int difference = 0;

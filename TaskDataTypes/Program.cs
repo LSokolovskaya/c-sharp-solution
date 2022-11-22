@@ -46,23 +46,23 @@
 //     int resultOther = 0;
 //     if (!string.IsNullOrEmpty(text))
 //     {
-//         for (int i = 0; i < text?.Length; i++)
+//         foreach (var item in text)
 //         {
-//             if (char.IsLetter(text[i]))
+//             if (char.IsLetter(item))
 //             {
-//                 resultString += i;
+//                 resultString++;
 //             }
-//             else if (char.IsNumber(text[i]))
+//             else if (char.IsNumber(item))
 //             {
-//                 resultNumber += i;
+//                 resultNumber++;
 //             }
-//             else if (char.IsWhiteSpace(text[i]))
+//             else if (char.IsWhiteSpace(item))
 //             {
-//                 resultSpace += i;
+//                 resultSpace++;
 //             }
 //             else
 //             {
-//                 resultOther += 1;
+//                 resultOther++;
 //             }
 //         }
 //         System.Console.WriteLine($"Колличество букв: {resultString}, колличество пробелов: {resultSpace}, колличество цифр: {resultNumber}, другие символы: {resultOther}");
@@ -83,27 +83,20 @@
     // System.Console.WriteLine("Введите символ, через который хотите вывести массив");
     // string? sign = Console.ReadLine();
     string index = "";
-    if (!string.IsNullOrEmpty(text))
+    if (!string.IsNullOrEmpty(text) && !string.IsNullOrEmpty(Convert.ToString(symbol)))
     {
-        if (!string.IsNullOrEmpty(Convert.ToString(symbol)))
+        System.Console.WriteLine("Введите символ, через который хотите вывести массив");
+        string? sign = Console.ReadLine();
+        for (int i = 0; i < text.Length; i++)
         {
-            System.Console.WriteLine("Введите символ, через который хотите вывести массив");
-            string? sign = Console.ReadLine();
-            for (int i = 0; i < text.Length; i++)
+            if (symbol == text[i])
             {
-                if (symbol == text[i])
-                {
-                    index =string.Join( Convert.ToString(i), sign);
-                    // index = String.Concat($"{index}", Convert.ToString(i), sign);
-                }
+                index = string.Join(Convert.ToString(i), sign);
+                // index = String.Concat($"{index}", Convert.ToString(i), sign);
             }
-            // System.Console.WriteLine(string.Join(sign, index));
-            System.Console.WriteLine(index);
         }
-        else
-        {
-            System.Console.WriteLine(("Тут тоже пусто..."));
-        }
+        // System.Console.WriteLine(string.Join(sign, index));
+        System.Console.WriteLine(index);
     }
     else
     {
@@ -142,3 +135,5 @@
 
 
 // 7. Проработать 10 раздличных методов string и описать через коментарий, что делает данный метод, его входные параметры и выходные данные
+
+

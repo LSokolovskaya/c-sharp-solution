@@ -1,0 +1,15 @@
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/bin/Debug/net6.0/TaskApplication10
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/bin/Debug/net6.0/TaskApplication10.deps.json
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/bin/Debug/net6.0/TaskApplication10.runtimeconfig.json
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/bin/Debug/net6.0/TaskApplication10.dll
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/bin/Debug/net6.0/TaskApplication10.pdb
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/TaskApplication10.csproj.AssemblyReference.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/TaskApplication10.GeneratedMSBuildEditorConfig.editorconfig
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/TaskApplication10.AssemblyInfoInputs.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/TaskApplication10.AssemblyInfo.cs
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/TaskApplication10.csproj.CoreCompileInputs.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/TaskApplication10.dll
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/refint/TaskApplication10.dll
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/TaskApplication10.pdb
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/TaskApplication10.genruntimeconfig.cache
+/Users/liubasokolovskaya/Desktop/c-sharp-solution/TaskApplication10/obj/Debug/net6.0/ref/TaskApplication10.dll
