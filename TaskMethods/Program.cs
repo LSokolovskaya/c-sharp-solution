@@ -109,65 +109,74 @@ internal class Program
     // 5. На входе n – количество элементов массива (вводится с клавиатуры). Далее производится 
     // заполнение массива с слуйчными числами. Реализуйте два метода для поиска минимального и 
     // максимального значения.
-    // static void Task5()
-    // {
-    //     System.Console.WriteLine("Введите длину масива");
-    //     string input = Console.ReadLine();
-    //     if (int.TryParse(input, out _))
-    //     {
-    //         double[] numbers = new double[numberIndex];
-    //         for (int i = 0; i < numbers.Length; i++)
-    //         {
-    //             numbers[i] = new Random().Next(-100, 100);
-    //         }
-    //         System.Console.WriteLine(string.Join(",", numbers));
-    //         System.Console.WriteLine(MethodMinNumbers(numbers));
-    //         System.Console.WriteLine(MethodMaxNumber(numbers));
-    //     }
-    //     else
-    //     {
-    //         System.Console.WriteLine("error");
-    //     }
-    // }
-    // static int MethodMinNumbers(int[] numbers)
-    // {
-    //     int numberMin = number[0];
-    //     for (int i = 0; i < numbers.Length; i++)
-    //     {
-    //         if (numberMin > numberMin[i])
-    //         {
-    //             numberMi = numberMin[i];
-    //         }
-    //     }
-    //     return numberMin;
-    // }
-    // static double MethodMaxNumber(double[] numbers)
-    // {
-    //     int numberMax = number[0];
-    //     for (int i = 0; i < numbers.Length; i++)
-    //     {
-    //         if (numberMax < numbers[i])
-    //         {
-    //             numberMax = numbers[i];
-    //         }
-    //     }
-    //     return numberMax;
-    // }
+    static void Task5()
+    {
+        Console.WriteLine("введите длинну массива");
+        string? input = Console.ReadLine();
+        if (int.TryParse(input, out int numberindex))
+        {
+            double[] numbers = new double[numberindex];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = new Random().Next(-100, 100);
+            }
+            Console.WriteLine(string.Join(",", numbers));
+            Console.WriteLine(MethodMinNumber(numbers));
+            Console.WriteLine(MethodMaxNumber(numbers));
+        }
+        else
+        {
+            Console.WriteLine("error");
+        }
+    }
+
+    static double MethodMinNumber(double[] number)
+    {
+        double numberMin = number[0];
+        for (int i = 0; i < number.Length; i++)
+        {
+            if (numberMin > number[i])
+            {
+                numberMin = number[i];
+            }
+        }
+        return numberMin;
+    }
+    static double MethodMaxNumber(double[] number)
+    {
+        double numberMax = number[0];
+        for (int i = 0; i < number.Length; i++)
+        {
+            if (numberMax < number[i])
+            {
+                numberMax = number[i];
+            }
+        }
+        return numberMax;
+    }
     #endregion
     #region Задача6
     // 6. На входе n – количество элементов массива (вводится с клавиатуры). Далее производится заполнение массива с слуйчными числами. Реализуйте методы подсчета количества элементов массива меньше и большe среднего значения.
-    // static void Task6()
-    // {
-
-    // }
-    // static int CountLess(int[] numbers)
-    // {
-
-    // }
-    // static int CountMore(int[] numbers)
-    // {
-
-    // }
+    static void Task6()
+    {
+        Console.WriteLine("введите длинну массива");
+        string? input = Console.ReadLine();
+        if (int.TryParse(input, out int numberindex))
+        {
+            double[] numbers = new double[numberindex];
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = new Random().Next(-100, 100);
+            }
+            Console.WriteLine(string.Join(",", numbers));
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+        else
+        {
+            Console.WriteLine("error");
+        }
+    }
     #endregion
     #region Задача7
     // 7. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве только числа. Второй для получения суммы всех элементов массива. Если результат метода проверки – true, то вызывать новый метод, возвращающий сумму всех элементов массива
@@ -190,25 +199,43 @@ internal class Program
     }
     #endregion
     #region Задача8
-    //   8. На входе массив.Реализуйте2метода.Первыйдляпроверки,чтовмассиве только строки. Второй для получения суммы всех строчных элементов массива. Если результат метода проверки – true, то вызывать новый метод, возвращающую конкатенацию всех строчных элементов массива
+    //  8. На входе массив. Реализуйте 2 метода. Первый для проверки,что вмассиве только строки. Второй для получения суммы всех строчных элементов массива. Если результат метода проверки – true, то вызывать новый метод, возвращающую конкатенацию всех строчных элементов массива
+    static void Task6()
+    {
 
+    }
+    static int CountLess(int[] numbers)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] is not int)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    static int CountMore(int[] numbers)
+    {
+
+    }
     #endregion
-
-}
-
-
-
-
-
-
-
+#region Задача9
 // 9. На входе 2 массива, размерность которых вводится с клавиатуры, а значения заполняются случайными числами. Реализуйте 2 метода. Первый что массивы имеют одинаковую размерность и все элементы отличаются. Второй произвести поэлементное умножение. Если результат метода проверки – true, то вызывать новый метод, возвращающий вывод элементов через запятую
+#endregion
+#region Задача10
 // 10. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве только числа. Второй для получения только четных элементов массива. Если результат метода проверки – true, то вызывать новую метод, возвращающий массив с четными элементами массива
+#endregion
+#region Задача11
 // 11. Навходечисло.Необходимосоздатьметод,возвращающийфакториалчисла. Пример фактериала 4! = 1 * 2 * 3 * 4
+#endregion
+#region Задача12
 // 12. На входе строка. Необходимо создать метод, возвращающий true, если это слово палиндром и false в противном случае
+#endregion
+#region Задача13
 // 13. На входе строка. Необходимо создать метод, возвращающий true, если это слово анаграмма и false в противном случае
-// 14. Реализовать метод возвращающий разность между НОК и НОД для двух чисел 15. Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-
-// ую
-
-
-
+#endregion
+#region Задача14
+// 14. Реализовать метод возвращающий разность между НОК и НОД для двух чисел 15. Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-ую
+#endregion
+}
