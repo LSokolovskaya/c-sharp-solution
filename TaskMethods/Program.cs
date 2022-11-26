@@ -8,7 +8,14 @@ internal class Program
         // Task3();
         // Task4();
         // Task5();
-        Task7();
+        // Task7();
+        // Task8();
+        // Task9();
+        // Task10();
+        // Task11();
+        // Task12();
+        // Task13();
+        // Task14();
     }
     static bool MethodIsNumber(object[] array)
     {
@@ -21,7 +28,6 @@ internal class Program
         }
         return true;
     }
-
     #region Задача1
     // Пользователь вводит имя и фамилию. Необходимо создать метод возвращающую строку вида «Привет, {имя} {фамилия}»
     static void Task1()
@@ -200,42 +206,103 @@ internal class Program
     #endregion
     #region Задача8
     //  8. На входе массив. Реализуйте 2 метода. Первый для проверки,что вмассиве только строки. Второй для получения суммы всех строчных элементов массива. Если результат метода проверки – true, то вызывать новый метод, возвращающую конкатенацию всех строчных элементов массива
-    static void Task6()
+    static void Task8()
     {
-
-    }
-    static int CountLess(int[] numbers)
-    {
-        for (int i = 0; i < array.Length; i++)
+        object[] array = { "s", "e", "f", "g", "h", "c", "v", "b", "n" };
+        if ((Convert.ToBoolean(MethodIsNotNumber(array))))
         {
-            if (array[i] is not int)
+            System.Console.WriteLine(MethodConcat(array));
+        }
+        else
+        {
+            System.Console.WriteLine("error");
+        }
+    }
+    static int MethodIsNotNumber(object[] text)
+    {
+        for (int i = 0; i < text.Length; i++)
+        {
+            if (text[i] is string)
             {
-                return false;
+                return Convert.ToInt32(true);
             }
         }
-        return true;
+        return Convert.ToInt32(false);
     }
-    static int CountMore(int[] numbers)
+    static string MethodConcat(object[] array)
+    {
+        string result = "";
+        for (int i = 0; i < array.Length; i++)
+        {
+            // result = string.Concat(array[i], array[i]);
+            result = result + array[i];
+        }
+        return result;
+    }
+    #endregion
+    #region Задача9
+    // 9. На входе 2 массива, размерность которых вводится с клавиатуры, а значения заполняются случайными числами. Реализуйте 2 метода. Первый что массивы имеют одинаковую размерность и все элементы отличаются. Второй произвести поэлементное умножение. Если результат метода проверки – true, то вызывать новый метод, возвращающий вывод элементов через запятую
+    static void Task9()
     {
 
     }
     #endregion
-#region Задача9
-// 9. На входе 2 массива, размерность которых вводится с клавиатуры, а значения заполняются случайными числами. Реализуйте 2 метода. Первый что массивы имеют одинаковую размерность и все элементы отличаются. Второй произвести поэлементное умножение. Если результат метода проверки – true, то вызывать новый метод, возвращающий вывод элементов через запятую
-#endregion
-#region Задача10
-// 10. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве только числа. Второй для получения только четных элементов массива. Если результат метода проверки – true, то вызывать новую метод, возвращающий массив с четными элементами массива
-#endregion
-#region Задача11
-// 11. Навходечисло.Необходимосоздатьметод,возвращающийфакториалчисла. Пример фактериала 4! = 1 * 2 * 3 * 4
-#endregion
-#region Задача12
-// 12. На входе строка. Необходимо создать метод, возвращающий true, если это слово палиндром и false в противном случае
-#endregion
-#region Задача13
-// 13. На входе строка. Необходимо создать метод, возвращающий true, если это слово анаграмма и false в противном случае
-#endregion
-#region Задача14
-// 14. Реализовать метод возвращающий разность между НОК и НОД для двух чисел 15. Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-ую
-#endregion
+    #region Задача10
+    // 10. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве только числа. Второй для получения только четных элементов массива. Если результат метода проверки – true, то вызывать новую метод, возвращающий массив с четными элементами массива
+    static void Task10()
+    {
+        object[] array = { 1, 2, 4, 5, 6, 7, 4, 2, 4, 56 };
+        if (MethodIsNumber(array))
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (MethodChetnoe(array[i]))
+                {
+                    System.Console.WriteLine(string.Join(",", array[i]));
+                }
+            }
+        }
+    }
+    static int MethodChetnoe(int[] array)
+    {
+        int result;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] % 2 = 0)
+            {
+                result = string.Join(",", array[i])
+            }
+        }
+        return result
+    }
+    #endregion
+    #region Задача11
+    // 11. На входе число. Необходимо создать метод,возвращающий факториал числа. Пример фактериала 4! = 1 * 2 * 3 * 4
+    static void Task12()
+    {
+       
+    }
+    static int MethodFakterial(string text)
+    {
+         string? text = Console.ReadLine();
+        if (int.TryParse(consoleText, out int number) && number > 0)
+        {
+            int result = 1;
+            for (int i = 0; i <= number; i++)
+            {
+                result *= i;
+            }
+            Console.WriteLine(result);
+        }
+    }
+    #endregion
+    #region Задача12
+    // 12. На входе строка. Необходимо создать метод, возвращающий true, если это слово палиндром и false в противном случае
+    #endregion
+    #region Задача13
+    // 13. На входе строка. Необходимо создать метод, возвращающий true, если это слово анаграмма и false в противном случае
+    #endregion
+    #region Задача14
+    // 14. Реализовать метод возвращающий разность между НОК и НОД для двух чисел 15. Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-ую
+    #endregion
 }
