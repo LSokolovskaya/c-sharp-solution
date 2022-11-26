@@ -13,7 +13,7 @@ internal class Program
         // Task9();
         // Task10();
         // Task11();
-        // Task12();
+        Task12();
         // Task13();
         // Task14();
     }
@@ -249,60 +249,69 @@ internal class Program
     #endregion
     #region Задача10
     // 10. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве только числа. Второй для получения только четных элементов массива. Если результат метода проверки – true, то вызывать новую метод, возвращающий массив с четными элементами массива
-    static void Task10()
-    {
-        object[] array = { 1, 2, 4, 5, 6, 7, 4, 2, 4, 56 };
-        if (MethodIsNumber(array))
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (MethodChetnoe(array[i]))
-                {
-                    System.Console.WriteLine(string.Join(",", array[i]));
-                }
-            }
-        }
-    }
-    static int MethodChetnoe(int[] array)
-    {
-        int result;
-        for (int i = 0; i < array.Length; i++)
-        {
-            if (array[i] % 2 = 0)
-            {
-                result = string.Join(",", array[i])
-            }
-        }
-        return result
-    }
+    // static void Task10()
+    // {
+    //     object[] array = { 1, 2, 4, 5, 6, 7, 4, 2, 4, 56 };
+    //     if (MethodIsNumber(array))
+    //     {
+    //         for (int i = 0; i < array.Length; i++)
+    //         {
+    //             if (MethodChetnoe(array[i]))
+    //             {
+    //                 System.Console.WriteLine(string.Join(",", array[i]));
+    //             }
+    //         }
+    //     }
+    // }
+    // static int MethodChetnoe(int[] array)
+    // {
+    //     int result;
+    //     for (int i = 0; i < array.Length; i++)
+    //     {
+    //         if (array[i] % 2 = 0)
+    //         {
+    //             result = string.Join(",", array[i])
+    //         }
+    //     }
+    //     return result
+    // }
     #endregion
     #region Задача11
-    // 11. На входе число. Необходимо создать метод,возвращающий факториал числа. Пример фактериала 4! = 1 * 2 * 3 * 4
+    // 11. На входе число. Необходимо создать метод, возвращающий факториал числа. Пример факториала 4! = 1 * 2 * 3 * 4
     static void Task12()
     {
-       
+        int number = Convert.ToInt32(Console.ReadLine());
+        System.Console.WriteLine(MethodFaktorial(number));
     }
-    static int MethodFakterial(string text)
+    static int MethodFaktorial(int number)
     {
-         string? text = Console.ReadLine();
-        if (int.TryParse(consoleText, out int number) && number > 0)
+        int result = 1;
+        for (int i = 1; i <= number; i++)
         {
-            int result = 1;
-            for (int i = 0; i <= number; i++)
-            {
-                result *= i;
-            }
-            Console.WriteLine(result);
+            result *= i;
         }
+        return result;
     }
     #endregion
     #region Задача12
     // 12. На входе строка. Необходимо создать метод, возвращающий true, если это слово палиндром и false в противном случае
+    static void Task12()
+    {
+        string text = "А роза упала на лапу Азора";
+
+    }
+    static string MethodPalindrom(string word)
+    {
+        
+    }
     #endregion
     #region Задача13
     // 13. На входе строка. Необходимо создать метод, возвращающий true, если это слово анаграмма и false в противном случае
     #endregion
     #region Задача14
-    // 14. Реализовать метод возвращающий разность между НОК и НОД для двух чисел 15. Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-ую
+    // 14. Реализовать метод возвращающий разность между НОК и НОД для двух чисел 
+    #endregion
+    #region Задача15
+    // 15. Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-ую
     #endregion
 }
