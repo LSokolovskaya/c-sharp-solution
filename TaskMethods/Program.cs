@@ -13,7 +13,7 @@ internal class Program
         // Task9();
         // Task10();
         // Task11();
-        Task12();
+        // Task12();
         // Task13();
         // Task14();
     }
@@ -241,40 +241,89 @@ internal class Program
     }
     #endregion
     #region Задача9
-    // 9. На входе 2 массива, размерность которых вводится с клавиатуры, а значения заполняются случайными числами. Реализуйте 2 метода. Первый что массивы имеют одинаковую размерность и все элементы отличаются. Второй произвести поэлементное умножение. Если результат метода проверки – true, то вызывать новый метод, возвращающий вывод элементов через запятую
+    // 9. На входе 2 массива, размерность которых вводится с клавиатуры, а значения заполняются случайными числами.
+    //  Реализуйте 2 метода. Первый что массивы имеют одинаковую размерность и все элементы отличаются по индексу. Второй произвести поэлементное умножение. 
+    // Если результат метода проверки – true, то вызывать новый метод, возвращающий вывод элементов через запятую
     static void Task9()
     {
-
+        int lenght1 = Convert.ToInt32(Console.ReadLine());
+        int[] numbers1 = new int[lenght1];
+        for (int i = 0; i < lenght1; i++)
+        {
+            numbers1[i] = new Random().Next(-100, 100);
+        }
+        System.Console.WriteLine(string.Join(", ", numbers1));
+        int lenght2 = Convert.ToInt32(Console.ReadLine());
+        int[] numbers2 = new int[lenght2];
+        for (int i = 0; i < lenght2; i++)
+        {
+            numbers2[i] = new Random().Next(-100, 100);
+        }
+        System.Console.WriteLine(string.Join(", ", numbers2));
+        if (MethodLenght(numbers1, numbers2))
+        {
+            System.Console.WriteLine(MethodMultiplicationItems(numbers1, numbers2));
+        }
+        else
+        {
+            System.Console.WriteLine("error");
+        }
+    }
+    // 4, 5, 7, 8, 9
+    // 7, 6, 7, 1, 3 
+    static bool MethodLenght(int[] number1, int[] number2)
+    {
+        if (number1.Length != number2.Length)
+        {
+            return false;
+        }
+        for (int i = 0; i < number1.Length; i++)
+        {
+            if (number1[i] == number2[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    static string MethodMultiplicationItems(int[] number1, int[] number2)
+    {
+        int[] result = new int[number1.Length];
+        for (int i = 0; i < number1.Length; i++)
+        {
+            result[i] = number1[i] * number2[i];
+        }
+        return string.Join(", ", result);
     }
     #endregion
     #region Задача10
     // 10. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве только числа. Второй для получения только четных элементов массива. Если результат метода проверки – true, то вызывать новую метод, возвращающий массив с четными элементами массива
-    // static void Task10()
-    // {
-    //     object[] array = { 1, 2, 4, 5, 6, 7, 4, 2, 4, 56 };
-    //     if (MethodIsNumber(array))
-    //     {
-    //         for (int i = 0; i < array.Length; i++)
-    //         {
-    //             if (MethodChetnoe(array[i]))
-    //             {
-    //                 System.Console.WriteLine(string.Join(",", array[i]));
-    //             }
-    //         }
-    //     }
-    // }
-    // static int MethodChetnoe(int[] array)
-    // {
-    //     int result;
-    //     for (int i = 0; i < array.Length; i++)
-    //     {
-    //         if (array[i] % 2 = 0)
-    //         {
-    //             result = string.Join(",", array[i])
-    //         }
-    //     }
-    //     return result
-    // }
+    static void Task10()
+    {
+        object[] array = { 1, 2, 4, 5, 6, 7, 4, 2, 4, 56 };
+        if (MethodIsNumber(array))
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (Convert.ToBoolean(MethodChetnoe(array)))
+                {
+                    System.Console.WriteLine(string.Join(",", array[i]));
+                }
+            }
+        }
+    }
+    static bool MethodChetnoe(object[] array)
+    {
+        bool result = true;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] % 2 = 0)
+            {
+                result = true;
+            }
+        }
+        return result;
+    }
     #endregion
     #region Задача11
     // 11. На входе число. Необходимо создать метод, возвращающий факториал числа. Пример факториала 4! = 1 * 2 * 3 * 4
@@ -295,15 +344,21 @@ internal class Program
     #endregion
     #region Задача12
     // 12. На входе строка. Необходимо создать метод, возвращающий true, если это слово палиндром и false в противном случае
-    static void Task12()
-    {
-        string text = "А роза упала на лапу Азора";
+    // static void Task12()
+    // {
+    //     string text = "lol";
 
-    }
-    static string MethodPalindrom(string word)
-    {
-        
-    }
+    // }
+    // static string MethodPalindrom(string word)
+    // {
+    //     bool result = true;
+    //     for (int i = 0; i < word.Length-1; i++)
+    //     {
+    //         string wordPalindrom = Convert.ToString(word[i] + word[i+1]);
+
+    //     }
+    //     return result;
+    // }
     #endregion
     #region Задача13
     // 13. На входе строка. Необходимо создать метод, возвращающий true, если это слово анаграмма и false в противном случае

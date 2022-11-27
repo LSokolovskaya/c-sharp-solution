@@ -1,5 +1,5 @@
-﻿// // 1. Пользователь вводит границы интервала из которого программа загадывает число. Написать программу по поиску 
-// // данного числа. Пользователь пишиет число в консоль, а программа отвечает.
+﻿// // // 1. Пользователь вводит границы интервала из которого программа загадывает число. Написать программу по поиску 
+// // // данного числа. Пользователь пишиет число в консоль, а программа отвечает.
 // {
 //     System.Console.WriteLine("Введите нижнюю границу интервала");
 //     int minNumber = Convert.ToInt32(Console.ReadLine());
@@ -36,7 +36,7 @@
 //     }
 // }
 
-// 2. Написать программу, которая подсчитывает количество в строке букв, пробелов, цифр и остальных символов.
+// // 2. Написать программу, которая подсчитывает количество в строке букв, пробелов, цифр и остальных символов.
 // {
 //     System.Console.WriteLine("Введите строку");
 //     string? text = Console.ReadLine();
@@ -74,66 +74,88 @@
 // }
 
 
-// 3. Пользователь вводит символ. Записать все позиции данного данного символа в строке в массив и вывести через символ, который cкажет пользователь.
-{
-    System.Console.WriteLine("введите строку");
-    string? text = Console.ReadLine();
-    System.Console.WriteLine("введите символ");
-    char? symbol = Convert.ToChar(Console.ReadLine());
-    // System.Console.WriteLine("Введите символ, через который хотите вывести массив");
-    // string? sign = Console.ReadLine();
-    string index = "";
-    if (!string.IsNullOrEmpty(text) && !string.IsNullOrEmpty(Convert.ToString(symbol)))
-    {
-        System.Console.WriteLine("Введите символ, через который хотите вывести массив");
-        string? sign = Console.ReadLine();
-        for (int i = 0; i < text.Length; i++)
-        {
-            if (symbol == text[i])
-            {
-                index = string.Join(Convert.ToString(i), sign);
-                // index = String.Concat($"{index}", Convert.ToString(i), sign);
-            }
-        }
-        // System.Console.WriteLine(string.Join(sign, index));
-        System.Console.WriteLine(index);
-    }
-    else
-    {
-        System.Console.WriteLine(("Пусто..."));
-    }
-}
+// // 3. Пользователь вводит символ. Записать все позиции данного данного символа в строке в массив и вывести через символ, который cкажет пользователь.
+// {
+//     System.Console.WriteLine("введите строку");
+//     string? text = Console.ReadLine();
+//     System.Console.WriteLine("введите символ");
+//     char? symbol = Convert.ToChar(Console.ReadLine());
+//     // System.Console.WriteLine("Введите символ, через который хотите вывести массив");
+//     // string? sign = Console.ReadLine();
+//     string index = "";
+//     if (!string.IsNullOrEmpty(text) && !string.IsNullOrEmpty(Convert.ToString(symbol)))
+//     {
+//         System.Console.WriteLine("Введите символ, через который хотите вывести массив");
+//         string? sign = Console.ReadLine();
+//         for (int i = 0; i < text.Length; i++)
+//         {
+//             if (symbol == text[i])
+//             {
+//                 index = string.Join(Convert.ToString(i), sign);
+//                 // index = String.Concat($"{index}", Convert.ToString(i), sign);
+//             }
+//         }
+//         // System.Console.WriteLine(string.Join(sign, index));
+//         System.Console.WriteLine(index);
+//     }
+//     else
+//     {
+//         System.Console.WriteLine(("Пусто..."));
+//     }
+// }
 
 
 // 4. Пользователь вводит число N, которое является индексом последнего элемента ряда Фиббоначи. Вывести весь этот ряд записанный в массив.
 //EndsWith
 // {
-// System.Console.WriteLine("Введите индекс последнего элемента ряда Фибоначчи");
-// Char? simbol = Convert.ToChar(Console.ReadLine());
-// int number = int.Parse(Console.ReadLine);
-// int a = 0;
-// int b = 1;
-// for (int i = 0; i = ; i++)
-// {
-//     int c = a + b;
-//     int d = c + b;
-//     System.Console.WriteLine(d);
+//     System.Console.WriteLine("введите число, которое является индексом последнего элемента ряда Фиббоначи");
+//     int index = Convert.ToInt32(Console.ReadLine());
+//     int a = 0;
+//     int b = 1;
+//     int[] result = new int[index];
+//     for (int i = 2; i < index; i++)
+//     {
+//         result[i - 2] = a;
+//         result[i - 1] = b;
+//         result[i] = a + b;
+//         a = b;
+//         b = result[i];
+//     }
+//     System.Console.WriteLine(string.Join(' ', result));
 // }
-// System.Console.WriteLine(c);
-// int[] fibonachi = new 
-
-
-// }
-
 // 5. У пользователя есть строка, удалить из неё все числа и символы ‘.’, ‘-’, ‘,’ , ‘*’ и тд. Заменить пробелы символом ‘/’.
 //  Если пользователь ввел символ вопрос ‘?’ он может быть только один и после него пробелы должны заменены на ‘=‘, все большие буквы 
 // заменить на маленькую и перед ней поставить ‘-’, но результирующая строка не может начинаться с ‘-’
 // ПриветМир, я Пишу код*который не ВсегдаХороший)Но я?Учусь и у Меня?Все получится привет-мир/я/-пишу/кодкоторый/не/-всегда-хороший-но/я?-учусь=и=у=-меня- все=получится
-
+{
+    string text = "ПриветМир, я Пишу код*который не ВсегдаХороший)Но я?Учусь и у Меня?Все получится";
+    string result = "";
+    if (!string.IsNullOrEmpty(text))
+    {
+        // text = text.ToLower();
+        for (int i = 0; i < text.Length; i++)
+        {
+            result 
+            if (char.IsLetter(text[i]))
+            {
+                result += text[i];
+            }
+            // if (char.IsUpper(text[i]))
+            // {
+            //     result = "-" + text[i];
+            // }
+        }
+        System.Console.WriteLine(result);
+    }
+    else
+    {
+        System.Console.WriteLine("error");
+    }
+}
 
 // 6. Проработать 7 раздличных методов char и описать через коментарий, что делает данный метод, его входные параметры и выходные данные
+{
 
-
+}
 // 7. Проработать 10 раздличных методов string и описать через коментарий, что делает данный метод, его входные параметры и выходные данные
-
 
