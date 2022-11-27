@@ -135,7 +135,7 @@
         // text = text.ToLower();
         for (int i = 0; i < text.Length; i++)
         {
-            result 
+            result
             if (char.IsLetter(text[i]))
             {
                 result += text[i];
@@ -158,4 +158,40 @@
 
 }
 // 7. Проработать 10 раздличных методов string и описать через коментарий, что делает данный метод, его входные параметры и выходные данные
-
+{
+    string textFirst = "qwertyuiop[]asdfghjkl;'zxcvbnm,./1234567890";
+    string textSecond = "wertyuildvbqr62903tedfvnsfktujwergnadfmv";
+    //1 аналог интерполяции, можно добавить много строк
+    System.Console.WriteLine(string.Format(textFirst, "FGJJH", "WER", "1234"));
+    //2 для сранения строк(вместо него можно использовать ==)
+    System.Console.WriteLine(textFirst.Equals(textSecond));
+    //3 ищет подстроку, если находит, то выводит индекс первого вхождения подстроки, в противном случае -1
+    System.Console.WriteLine(textFirst.IndexOf("h"));
+    //4 ищет подстроку, если находит, то выводит индекс вхождения подстроки с конца, в противном случае -1
+    System.Console.WriteLine(textFirst.LastIndexOf("h"));
+    //5 проверяет начинаетмся ли строка с подстроки
+    System.Console.WriteLine(textFirst.StartsWith("qwer"));//true
+    System.Console.WriteLine(textFirst.StartsWith("fgh"));//false
+    //6 проверяет заканчивается ли строка подстрокой
+    System.Console.WriteLine(textFirst.EndsWith("890"));//true
+    System.Console.WriteLine(textFirst.EndsWith("fgh"));//false
+    //7 убирает пробелы с начала и конца
+    System.Console.WriteLine(textFirst.Trim());
+    //8 проверияет на пустоту или пробел
+    System.Console.WriteLine(string.IsNullOrWhiteSpace(" "));//false
+    System.Console.WriteLine(string.IsNullOrWhiteSpace(""));//true
+    //9 разбивает строку на части
+    System.Console.WriteLine(textFirst.Split(' '));//разбил по пробелам
+    System.Console.WriteLine(textFirst.Split("a"));//разбил по "a"
+    System.Console.WriteLine(textFirst.Split("k").Length);//Разбил по "k" и указал количество подстрок
+    //10 встречается ли символ(подстрока) в строке
+    System.Console.WriteLine(textFirst.Contains("g"));//true
+    System.Console.WriteLine(textFirst.Contains("!"));//false
+    //11 возвращет строку с удаленными символами(указывается с какой позиции
+    //  удалить или интервал с какой по какую позицию удалять)
+    System.Console.WriteLine(textFirst.Remove(5));
+    System.Console.WriteLine(textFirst.Remove(2,5));
+    //12заменяет один символ на другой, сначала указывается какой символ заменить,
+    // а потом на какой заменить
+    System.Console.WriteLine(textFirst.Replace("g","s"));
+}
