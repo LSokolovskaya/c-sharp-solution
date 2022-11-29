@@ -13,7 +13,7 @@ internal class Program
         // Task9();
         // Task10();
         // Task11();
-        // Task12();
+        Task12();
         // Task13();
         // Task14();
     }
@@ -300,34 +300,35 @@ internal class Program
     // 10. На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве только числа. Второй для получения только четных элементов массива. Если результат метода проверки – true, то вызывать новую метод, возвращающий массив с четными элементами массива
     static void Task10()
     {
-        object[] array = { 1, 2, 4, 5, 6, 7, 4, 2, 4, 56 };
-        if (MethodIsNumber(array))
+        string[] array = { "1", "2", "4", "5", "6", "7", "4", "2", "4", "56" };
+        if (MethodIsNumber(array) != true)
         {
             for (int i = 0; i < array.Length; i++)
             {
-                if (Convert.ToBoolean(MethodChetnoe(array)))
-                {
-                    System.Console.WriteLine(string.Join(",", array[i]));
-                }
+                System.Console.WriteLine(string.Join(',', MethodChetnoe(array)));
             }
+        }
+        else
+        {
+            System.Console.WriteLine("Не число");
         }
     }
-    static bool MethodChetnoe(object[] array)
+    static string[] MethodChetnoe(string[] array)
     {
-        bool result = true;
+        string[] text = new string[array.Length];
         for (int i = 0; i < array.Length; i++)
         {
-            if (array[i] % 2 = 0)
+            if (Convert.ToInt32(array[i]) % 2 == 0)
             {
-                result = true;
+                text[i] = array[i];
             }
         }
-        return result;
+        return text;
     }
     #endregion
     #region Задача11
     // 11. На входе число. Необходимо создать метод, возвращающий факториал числа. Пример факториала 4! = 1 * 2 * 3 * 4
-    static void Task12()
+    static void Task11()
     {
         int number = Convert.ToInt32(Console.ReadLine());
         System.Console.WriteLine(MethodFaktorial(number));
@@ -344,21 +345,21 @@ internal class Program
     #endregion
     #region Задача12
     // 12. На входе строка. Необходимо создать метод, возвращающий true, если это слово палиндром и false в противном случае
-    // static void Task12()
-    // {
-    //     string text = "lol";
-
-    // }
-    // static string MethodPalindrom(string word)
-    // {
-    //     bool result = true;
-    //     for (int i = 0; i < word.Length-1; i++)
-    //     {
-    //         string wordPalindrom = Convert.ToString(word[i] + word[i+1]);
-
-    //     }
-    //     return result;
-    // }
+    static void Task12()
+    {
+        string text = "fghjk";
+        System.Console.WriteLine(MethodPalindrom(text));
+    }
+    static bool MethodPalindrom(string text)
+    {
+        bool result = true;
+        for (int i = 0; i < text.Length - 1; i++)
+        {
+            string Palindrom = Convert.ToString(text[i] + text[i + 1]);
+            result = true;
+        }
+        return result;
+    }
     #endregion
     #region Задача13
     // 13. На входе строка. Необходимо создать метод, возвращающий true, если это слово анаграмма и false в противном случае
