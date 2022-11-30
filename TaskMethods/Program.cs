@@ -13,9 +13,10 @@ internal class Program
         // Task9();
         // Task10();
         // Task11();
-        Task12();
+        // Task12();
         // Task13();
         // Task14();
+        Task15();
     }
     static bool MethodIsNumber(object[] array)
     {
@@ -347,27 +348,127 @@ internal class Program
     // 12. На входе строка. Необходимо создать метод, возвращающий true, если это слово палиндром и false в противном случае
     static void Task12()
     {
-        string text = "fghjk";
-        System.Console.WriteLine(MethodPalindrom(text));
+        System.Console.WriteLine("Task12");
+        string str1 = "lol";
+        if (MethodPalindrom(str1) == true)
+        {
+            System.Console.WriteLine(true);
+        }
+        else
+        {
+            System.Console.WriteLine(false);
+        }
     }
     static bool MethodPalindrom(string text)
     {
-        bool result = true;
-        for (int i = 0; i < text.Length - 1; i++)
+        char[] array = new char[text.Length];
+        bool result = false;
+        for (int i = 0; i < text.Length; i++)
         {
-            string Palindrom = Convert.ToString(text[i] + text[i + 1]);
-            result = true;
+            array[i] = Convert.ToChar(text[i]);
+        }
+        string[] array1 = new string[text.Length];
+        for (int i = 0; i < text.Length; i++)
+        {
+            array1[i] = Convert.ToString(text[i]);
+        }
+        string[] array2 = array1.Reverse().ToArray();
+        for (int i = 0; i < text.Length; i++)
+        {
+            if (array1[i] == array2[i])
+            {
+                result = true;
+            }
         }
         return result;
     }
     #endregion
     #region Задача13
     // 13. На входе строка. Необходимо создать метод, возвращающий true, если это слово анаграмма и false в противном случае
+    static void Task13()
+    {
+
+    }
     #endregion
     #region Задача14
     // 14. Реализовать метод возвращающий разность между НОК и НОД для двух чисел 
+    static void Task14()
+    {
+        int number1 = Convert.ToInt32(Console.ReadLine());
+        int number2 = Convert.ToInt32(Console.ReadLine());
+        int result1 = MethodNOK(number1, number2);
+        int result2 = MethodNOD(number1, number2);
+        if (result1 > result2)
+        {
+            int result = result1 - result2;
+            System.Console.WriteLine($"{result1} - {result2} = {result}");
+        }
+        else
+        {
+            int result = result2 - result1;
+            System.Console.WriteLine($"{result2} - {result1} = {result}");
+        }
+    }
+    static int MethodNOK(int number1, int number2)
+    {
+        int nok = 0;
+        for (int i = 1; i <= (number1 * number2); i++)
+        {
+            if (i % number1 == 0 && i % number2 == 0)
+            {
+                nok = i;
+            }
+        }
+        return nok;
+    }
+    static int MethodNOD(int number1, int number2)
+    {
+        int nod = 0;
+        for (int i = 2; i > 0; i++)
+        {
+            if (number1 % i == 0 && number2 % i == 0)
+            {
+                nod = i;
+            }
+        }
+        return nod;
+    }
     #endregion
     #region Задача15
     // 15. Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-ую
+    static void Task15()
+    {
+        int number = Convert.ToInt32(Console.ReadLine());
+        System.Console.WriteLine($"Двоичная система = {Method2(number)}");//, шеснадцатиричная система{Method16(number)}");
+    }
+    static int Method2(int number)
+    {
+        int numberText = 0;
+        for (int i = 0; i > 0; i++)
+        {
+            if (number % 2 != 0)
+            {
+                numberText += number / 2;
+                number = number / 2;
+            }
+        }
+        return numberText;
+    }
+    static string Method16(int number)
+    {
+        string numberText = "";
+        for (int i = 0; i > 0; i++)
+        {
+            if (number % 16 != 0)
+            {
+                numberText += number % 2;
+            }
+            else
+            {
+                break;
+            }
+        }
+        return numberText;
+    }
     #endregion
 }
