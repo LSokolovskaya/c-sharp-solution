@@ -272,27 +272,27 @@ internal class Program
     }
     // 4, 5, 7, 8, 9
     // 7, 6, 7, 1, 3 
-    static bool MethodLenght(int[] number1, int[] number2)
+    static bool MethodLenght(int[] number1, int[] numberresult)
     {
-        if (number1.Length != number2.Length)
+        if (number1.Length != numberresult.Length)
         {
             return false;
         }
         for (int i = 0; i < number1.Length; i++)
         {
-            if (number1[i] == number2[i])
+            if (number1[i] == numberresult[i])
             {
                 return false;
             }
         }
         return true;
     }
-    static string MethodMultiplicationItems(int[] number1, int[] number2)
+    static string MethodMultiplicationItems(int[] number1, int[] numberresult)
     {
         int[] result = new int[number1.Length];
         for (int i = 0; i < number1.Length; i++)
         {
-            result[i] = number1[i] * number2[i];
+            result[i] = number1[i] * numberresult[i];
         }
         return string.Join(", ", result);
     }
@@ -349,8 +349,8 @@ internal class Program
     static void Task12()
     {
         System.Console.WriteLine("Task12");
-        string str1 = "lol";
-        if (MethodPalindrom(str1) == true)
+        string text2 = "lol";
+        if (MethodPalindrom(text2) == true)
         {
             System.Console.WriteLine(true);
         }
@@ -387,7 +387,34 @@ internal class Program
     // 13. На входе строка. Необходимо создать метод, возвращающий true, если это слово анаграмма и false в противном случае
     static void Task13()
     {
+        string text1 = "fgfgfg";
+        string text2 = "gfgfgf";
+        System.Console.WriteLine(MethodAnagrama(text1, text2));
+    }
+    static bool MethodAnagrama(string stroka, string stroka1)
+    {
+        bool result = true;
+        string[] array = new string[stroka.Length];
+        string[] array1 = new string[stroka1.Length];
+        if (stroka.Length == stroka1.Length)
+        {
+            for (int i = 0; i < stroka1.Length; i++)
+            {
+                array[i] = Convert.ToString(stroka[i]);
+                array1[i] = Convert.ToString(stroka1[i]);
+            }
+        }
+        Array.Sort(array);
+        Array.Sort(array1);
 
+        for (int i = 0; i < stroka.Length; i++)
+        {
+            if (array[i] != array1[i])
+            {
+                result = false;
+            }
+        }
+        return result;
     }
     #endregion
     #region Задача14
@@ -395,9 +422,9 @@ internal class Program
     static void Task14()
     {
         int number1 = Convert.ToInt32(Console.ReadLine());
-        int number2 = Convert.ToInt32(Console.ReadLine());
-        int result1 = MethodNOK(number1, number2);
-        int result2 = MethodNOD(number1, number2);
+        int numberresult = Convert.ToInt32(Console.ReadLine());
+        int result1 = MethodNOK(number1, numberresult);
+        int result2 = MethodNOD(number1, numberresult);
         if (result1 > result2)
         {
             int result = result1 - result2;
@@ -409,24 +436,24 @@ internal class Program
             System.Console.WriteLine($"{result2} - {result1} = {result}");
         }
     }
-    static int MethodNOK(int number1, int number2)
+    static int MethodNOK(int number1, int numberresult)
     {
         int nok = 0;
-        for (int i = 1; i <= (number1 * number2); i++)
+        for (int i = 1; i <= (number1 * numberresult); i++)
         {
-            if (i % number1 == 0 && i % number2 == 0)
+            if (i % number1 == 0 && i % numberresult == 0)
             {
                 nok = i;
             }
         }
         return nok;
     }
-    static int MethodNOD(int number1, int number2)
+    static int MethodNOD(int number1, int numberresult)
     {
         int nod = 0;
         for (int i = 2; i > 0; i++)
         {
-            if (number1 % i == 0 && number2 % i == 0)
+            if (number1 % i == 0 && numberresult % i == 0)
             {
                 nod = i;
             }
@@ -438,37 +465,20 @@ internal class Program
     // 15. Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-ую
     static void Task15()
     {
+        object[] array16 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F" };
+        object[] array2 = { 0, 1 };
         int number = Convert.ToInt32(Console.ReadLine());
-        System.Console.WriteLine($"Двоичная система = {Method2(number)}");//, шеснадцатиричная система{Method16(number)}");
+        System.Console.WriteLine($"Двоичная система = {MethodConvert(number, array2)}, шеснадцатиричная система = {MethodConvert(number, array16)}");
     }
-    static int Method2(int number)
+    static string MethodConvert(int number, object[] array)
     {
-        int numberText = 0;
-        for (int i = 0; i > 0; i++)
+        string number1 = "";
+        while (number >= 1)
         {
-            if (number % 2 != 0)
-            {
-                numberText += number / 2;
-                number = number / 2;
-            }
+            int ostatok = number % array.Length;
+            number1 += array[ostatok];
+            number /= array.Length;
         }
-        return numberText;
-    }
-    static string Method16(int number)
-    {
-        string numberText = "";
-        for (int i = 0; i > 0; i++)
-        {
-            if (number % 16 != 0)
-            {
-                numberText += number % 2;
-            }
-            else
-            {
-                break;
-            }
-        }
-        return numberText;
     }
     #endregion
 }
