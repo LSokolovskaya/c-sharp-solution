@@ -479,6 +479,7 @@ internal class Program
             number1 += array[ostatok];
             number /= array.Length;
         }
+        return number1;
     }
     #endregion
 }
