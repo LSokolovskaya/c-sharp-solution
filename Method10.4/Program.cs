@@ -1,28 +1,31 @@
-﻿// int number1 = Convert.ToInt32(Console.ReadLine());
-// int number2 = Convert.ToInt32(Console.ReadLine());
-// //если первое больше второг то поменять местами
-// if (number1 > number2)
-// {
-//     int result1 = number1;
-//     number1 = number2;
-//     number2 = result1;
-// }
-// System.Console.WriteLine(number1);
-// System.Console.WriteLine(number2);
+﻿// int[] arrays1 = new int[5] { 1, 2, 3, 5, 6 };
+// bool[] arrays2 = new bool[3];
+// int[] arrays3 = new int[] { 1, 2, 3, 4, 5, 6, 7, 8 };
+// string arrays4 = new[] {"1", "2"}
 
-static void Task()
+// Как изменить порядок элементов в строке на обратный без использования вспомогательных классов и методов?
+// string text = "qwertyuio";
+// string result = ;
+// for (int i = 0; i <= text.Length; i++)
+// {
+//     if()
+// }
+
+
+
+// Как определить позиции дублированного элемента и его значение в массиве, в котором содержатся 
+// все элементы типа int от 1 до 100, при этом в массиве только один элемент дублируется?
+// (массив не надо заполняит значениями, массив со значениями уже объялен и передается в метод)
+
+static string MethodIndex(int[] arrays)
 {
-    int number = Convert.ToInt32(Console.ReadLine());
-    System.Console.WriteLine(Method());
-    static ‹string Method()
+    string index = "";
+    for (int i = 0; i <= arrays.Length; i++)
     {
-        if (number % 2 == 0)
+        if (arrays[i] == arrays[i] + 1)
         {
-            return "четное";
-        }
-        else
-        {
-            return "нечетное";
+            index += i;
         }
     }
+    return index;
 }
