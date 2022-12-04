@@ -465,7 +465,7 @@ internal class Program
     // 15. Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-ую
     static void Task15()
     {
-        object[] array16 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F" };
+        object[] array16 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A",  "B", "C", "D", "E", "F" };
         object[] array2 = { 0, 1 };
         int number = Convert.ToInt32(Console.ReadLine());
         System.Console.WriteLine($"Двоичная система = {MethodConvert(number, array2)}, шеснадцатиричная система = {MethodConvert(number, array16)}");
