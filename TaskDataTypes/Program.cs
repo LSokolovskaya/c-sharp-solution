@@ -123,44 +123,46 @@
 //     }
 //     System.Console.WriteLine(string.Join(' ', result));
 // }
+
 // 5. У пользователя есть строка, удалить из неё все числа и символы ‘.’, ‘-’, ‘,’ , ‘*’ и тд. Заменить пробелы символом ‘/’.
 //  Если пользователь ввел символ вопрос ‘?’ он может быть только один и после него пробелы должны заменены на ‘=‘, все большие буквы 
 // заменить на маленькую и перед ней поставить ‘-’, но результирующая строка не может начинаться с ‘-’
 // ПриветМир, я Пишу код*который не ВсегдаХороший)Но я?Учусь и у Меня?Все получится привет-мир/я/-пишу/кодкоторый/не/-всегда-хороший-но/я?-учусь=и=у=-меня- все=получится
-{
-    string text = "ПриветМир, я Пишу код*который не ВсегдаХороший)Но я?Учусь и у Меня?Все получится";
-    string result = "";
-    if (!string.IsNullOrEmpty(text))
-    {
-        bool abcd = true;
-        // text = text.ToLower();
-        for (int i = 0; i < text.Length; i++)
-        {
-            if (char.IsLetter(text[i]))
-            {
-                result += text[i];
-            }
-            // if (char.IsUpper(text[i]))
-            // {
-            //     result = "-" + text[i];
-            // }
-            if (text[i] == ' ')
-            {
-                result += "/";
-            }
-            if (text[i] == '?' && abcd)
-            {
-                result += "/";
-                abcd = false;
-            }
-        }
-        System.Console.WriteLine(result);
-    }
-    else
-    {
-        System.Console.WriteLine("error");
-    }
-}
+// {
+//     string text = "ПриветМир, я Пишу код*который не ВсегдаХороший)Но я?Учусь и у Меня?Все получится";
+//     string result = "";
+//     if (!string.IsNullOrEmpty(text))
+//     {
+//         bool answer = true;
+//         // text = text.ToLower();
+//         for (int i = 0; i < text.Length; i++)
+//         {
+//             if (char.IsLetter(text[i]))
+//             {
+//                 result += text[i];
+//             }
+//             if (text[i] == ' ')
+//             {
+//                 result += "/";
+//             }
+//             if (text[i] == '?' && answer)
+//             {
+//                 result += "/";
+//                 answer = false;
+//             }
+//             if (char.IsUpper(text[i]))
+//             {
+//                 // result = (result.Replace(text[i], Convert.ToChar("-")));
+//                 // result += text[i];
+//             }
+//         }
+//         System.Console.WriteLine(result);
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("error");
+//     }
+// }
 
 // 6. Проработать 7 раздличных методов char и описать через коментарий, что делает данный метод, его входные параметры и выходные данные
 {
@@ -168,8 +170,8 @@
 }
 // 7. Проработать 10 раздличных методов string и описать через коментарий, что делает данный метод, его входные параметры и выходные данные
 // {
-//     string textFirst = "qwertyuiop[]asdfghjkl;'zxcvbnm,./1234567890";
-//     string textSecond = "wertyuildvbqr62903tedfvnsfktujwergnadfmv";
+    // string textFirst = "qwertyuiop[]asdfghjkl;'zxcvbnm,./1234567890";
+    // string textSecond = "wertyuildvbqr62903tedfvnsfktujwergnadfmv";
 //     //1 аналог интерполяции, можно добавить много строк
 //     System.Console.WriteLine(string.Format(textFirst, "FGJJH", "WER", "1234"));
 //     //2 для сранения строк(вместо него можно использовать ==)
@@ -194,8 +196,8 @@
 //     System.Console.WriteLine(textFirst.Split("a"));//разбил по "a"
 //     System.Console.WriteLine(textFirst.Split("k").Length);//Разбил по "k" и указал количество подстрок
 //     //10 встречается ли символ(подстрока) в строке
-//     System.Console.WriteLine(textFirst.Contains("g"));//true
-//     System.Console.WriteLine(textFirst.Contains("!"));//false
+    // System.Console.WriteLine(textFirst.Contains("g"));//true
+    // System.Console.WriteLine(textFirst.Contains("!"));//false
 //     //11 возвращет строку с удаленными символами(указывается с какой позиции
 //     //  удалить или интервал с какой по какую позицию удалять)
 //     System.Console.WriteLine(textFirst.Remove(5));

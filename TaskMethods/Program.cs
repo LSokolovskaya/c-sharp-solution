@@ -3,19 +3,19 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        // Task1();
-        // Task2();
-        // Task3();
-        // Task4();
-        // Task5();
-        // Task7();
-        // Task8();
-        // Task9();
-        // Task10();
-        // Task11();
-        // Task12();
-        // Task13();
-        // Task14();
+        Task1();
+        Task2();
+        Task3();
+        Task4();
+        Task5();
+        Task7();
+        Task8();
+        Task9();
+        Task10();
+        Task11();
+        Task12();
+        Task13();
+        Task14();
         Task15();
     }
     static bool MethodIsNumber(object[] array)
