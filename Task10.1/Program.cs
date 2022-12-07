@@ -6,7 +6,7 @@
         {
             // Task1();
             // Task2();
-            // Task3();
+            Task3();
             // Task4();
             // Task5();
             // Task6();
@@ -46,7 +46,7 @@
         static void Task2()
         {
             System.Console.WriteLine("Введите почтовый адрес");
-            string mail = Console.ReadLine();
+            string? mail = Console.ReadLine();
             System.Console.WriteLine(Mail(mail, out string result, out string domen));
         }
         static string Mail(string mail, out string result, out string domen)
@@ -79,26 +79,44 @@
         #endregion
         #region Task3
         // 3. Написать метод, который удаляет из строки заданный символ. Символ является входным параметром-значением. Строка должна быть параметром-ссылкой и результатом. (ref)
-        // static void Task3()
-        // {
-        //     System.Console.WriteLine("Введите символ, который хотите удалить");
-        //     char? simbol = Convert.ToChar(Console.ReadLine());
-        //     System.Console.WriteLine(MethodDelete(char simbol, ref string text));
-        // }
-        // static string MethodDelete(char simbol, ref string text)
-        // {
-        //     text = "Тzыz zклаzсzсzнzыzйz zиz zуz zтzеzбzя zвсzеz zпоzлzуzчzиzтzсяz,z zхzорzоzшzеzгоz zдzнzя";
-        //     string result = "";
-        //     for (int i = 0; i < text.Length; i++)
-        //     {
-        //         result = text[i] != simbol ? result + text[i] : "";
-        //     }
-        //     return result;
-        // }
+        static void Task3()
+        {
+            System.Console.WriteLine("Введите символ, который хотите удалить");
+            char simbol = Convert.ToChar(Console.ReadLine());
+            string text = "";
+            if (!string.IsNullOrEmpty(Convert.ToString(simbol)))
+            {
+                System.Console.WriteLine(MethodDelete(simbol, ref text));
+            }
+        }
+        static string MethodDelete(char simbol, ref string text)
+        {
+            text = "Тzыz zклаzсzсzнzыzйz zиz zуz zтzеzбzя zвсzеz zпоzлzуzчzиzтzсяz,z zхzорzоzшzеzгоz zдzнzя";
+            string result = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] != simbol)
+                {
+                    result += text[i];
+                }
+            }
+            return result;
+        }
         #endregion
         #region Task4
         // 4. Написать метод выполняющий сложение парметов, если параметры одного типа данных возвращать true и результат сложение, в противном случае false (out)
-
+        static void Task4()
+        {
+            object number1 = 4;
+            object number2 = 6;
+            object text1 = "qwe";
+            object text2 = "fghj";
+            System.Console.WriteLine(MethodSum(number1, number2, text1, text2, out object result));
+        }
+        static object MethodSum(object number1, object number2, object text1, object text2, out object result)
+        {
+            
+        }
         #endregion
         #region Task5
         // 5. Пользователь вводит строку и разделитель. Написать метод возвращающий наличие в строке разделителя, если разделитель есть вернуть строку разбитую данным разделителем (out)
