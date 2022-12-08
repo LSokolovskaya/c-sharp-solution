@@ -71,7 +71,6 @@
             else
             {
                 result = "false";
-                domen = "";
             }
             return result;
             return domen;
@@ -86,7 +85,8 @@
             string text = "";
             if (!string.IsNullOrEmpty(Convert.ToString(simbol)))
             {
-                System.Console.WriteLine(MethodDelete(simbol, ref text));
+                MethodDelete(simbol, ref text);
+                System.Console.WriteLine(text);
             }
         }
         static string MethodDelete(char simbol, ref string text)
@@ -100,7 +100,8 @@
                     result += text[i];
                 }
             }
-            return result;
+            text = result;
+            return text;
         }
         #endregion
         #region Task4
@@ -115,12 +116,15 @@
         }
         static object MethodSum(object number1, object number2, object text1, object text2, out object result)
         {
-            
+
         }
         #endregion
         #region Task5
         // 5. Пользователь вводит строку и разделитель. Написать метод возвращающий наличие в строке разделителя, если разделитель есть вернуть строку разбитую данным разделителем (out)
-
+        static void Task5()
+        {
+            
+        }
         #endregion
         #region Task6
         // 6. Написать метод возвращающий разность между найбольшим и наименьшим значением из списка. Результат разности возращать через out, метод для поиска минимального и максимального написать с использованием params
