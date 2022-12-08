@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             // Task1();
-            // Task2();
-            Task3();
+            Task2();
+            // Task3();
             // Task4();
             // Task5();
             // Task6();
@@ -47,32 +47,32 @@
         {
             System.Console.WriteLine("Введите почтовый адрес");
             string? mail = Console.ReadLine();
-            System.Console.WriteLine(Mail(mail, out string result, out string domen));
+            System.Console.WriteLine(Mail(mail, out bool result, out string domen));
         }
-        static string Mail(string mail, out string result, out string domen)
+        static string Mail(string mail, out bool result, out string domen)
         {
             domen = "";
-            result = "";
             if (mail.EndsWith("@gmail.com"))
             {
-                result = "true";
+                result = true;
                 domen = "@gmail.com";
             }
             else if (mail.EndsWith("@mail.ru"))
             {
-                result = "true";
+                result = true;
                 domen = "@mail.ru";
             }
             else if (mail.EndsWith("@yandex.ru"))
             {
-                result = "true";
+                result = true;
                 domen = "@yandex.ru";
             }
             else
             {
-                result = "false";
+                result = false;
+                domen = "";
             }
-            return result;
+            return result.ToString();
             return domen;
         }
         #endregion
@@ -81,63 +81,96 @@
         static void Task3()
         {
             System.Console.WriteLine("Введите символ, который хотите удалить");
-            char simbol = Convert.ToChar(Console.ReadLine());
+            string simbol = Console.ReadLine();
+            //ОБЯЗАТЕЛЬНО ВЫБИРАЙ СИМВОЛ Z
             string text = "";
-            if (!string.IsNullOrEmpty(Convert.ToString(simbol)))
+            if (!string.IsNullOrEmpty(simbol))
             {
-                MethodDelete(simbol, ref text);
-                System.Console.WriteLine(text);
+                System.Console.WriteLine(MethodDelete(simbol, ref text));
             }
-        }
-        static string MethodDelete(char simbol, ref string text)
-        {
-            text = "Тzыz zклаzсzсzнzыzйz zиz zуz zтzеzбzя zвсzеz zпоzлzуzчzиzтzсяz,z zхzорzоzшzеzгоz zдzнzя";
-            string result = "";
-            for (int i = 0; i < text.Length; i++)
+            else
             {
-                if (text[i] != simbol)
+                System.Console.WriteLine("empty");
+            }
+
+            static string MethodDelete(string simbol, ref string text)
+            {
+                text = "Тzыz zклаzсzсzнzыzйz zиz zуz zтzеzбzя zвсzеz zпоzлzуzчzиzтzсяz,z zхzорzоzшzеzгоz zдzнzя";
+                string result = "";
+                for (int i = 0; i < text.Length; i++)
                 {
-                    result += text[i];
+                    if (text[i].ToString() != simbol)
+                    {
+                        result += text[i];
+                    }
                 }
+                text = result;
+                return text;
             }
-            text = result;
-            return text;
-        }
-        #endregion
-        #region Task4
-        // 4. Написать метод выполняющий сложение парметов, если параметры одного типа данных возвращать true и результат сложение, в противном случае false (out)
-        static void Task4()
-        {
-            object number1 = 4;
-            object number2 = 6;
-            object text1 = "qwe";
-            object text2 = "fghj";
-            System.Console.WriteLine(MethodSum(number1, number2, text1, text2, out object result));
-        }
-        static object MethodSum(object number1, object number2, object text1, object text2, out object result)
-        {
 
+            #endregion
+            // #region Task4
+            // // 4. Написать метод выполняющий сложение парметов, если параметры одного типа данных возвращать true и результат сложение, в противном случае false (out)
+            // static void Task4()
+            // {
+            //     object number1 = 4;
+            //     object number2 = 6;
+            //     object text1 = "qwe";
+            //     object text2 = "fghj";
+            //     System.Console.WriteLine(MethodSum(number1, number2, text1, text2, out object result));
+            // }
+            // static object MethodSum(object number1, object number2, object text1, object text2, out object result)
+            // {
+
+            // }
+            // #endregion
+            #region Task5
+            // 5. Пользователь вводит строку и разделитель. Написать метод возвращающий наличие в строке разделителя, если разделитель есть вернуть строку разбитую данным разделителем (out)
+            static void Task5()
+            {
+                System.Console.WriteLine("Введите строку");
+                string text = Console.ReadLine();
+                System.Console.WriteLine("Введите сепаратор");
+                string separator = Console.ReadLine();
+            }
+            #endregion
+            #region Task6
+            // 6. Написать метод возвращающий разность между найбольшим и наименьшим значением из списка. Результат разности возращать через out, метод для поиска минимального и максимального написать с использованием params
+
+            #endregion
+            #region Task7
+            // 7. Написать метод который принимает строку, если строка содержит только 0 и 1 вернуть true, а 0 и 1 перевести в 10-ную систему счисления, в противном случае false (out)
+
+            #endregion
+            #region Task8
+            // 8. На входе метода набор 0 и 1 перевести в 16-ную систему счисления (params)
+
+            #endregion
         }
-        #endregion
-        #region Task5
-        // 5. Пользователь вводит строку и разделитель. Написать метод возвращающий наличие в строке разделителя, если разделитель есть вернуть строку разбитую данным разделителем (out)
-        static void Task5()
-        {
-            
-        }
-        #endregion
-        #region Task6
-        // 6. Написать метод возвращающий разность между найбольшим и наименьшим значением из списка. Результат разности возращать через out, метод для поиска минимального и максимального написать с использованием params
-
-        #endregion
-        #region Task7
-        // 7. Написать метод который принимает строку, если строка содержит только 0 и 1 вернуть true, а 0 и 1 перевести в 10-ную систему счисления, в противном случае false (out)
-
-        #endregion
-        #region Task8
-        // 8. На входе метода набор 0 и 1 перевести в 16-ную систему счисления (params)
-
-        #endregion
     }
 }
 
+
+
+
+
+
+// int BinarySearchIndex(int[] userArray, int numSearch, int indexStart, int indexEnd)
+// {
+//     if (indexStart > indexEnd)
+//     {
+//         return -1;
+//     }
+//     int middleIndex = (indexEnd + indexStart) / 2;
+
+//     return numSearch == userArray[middleIndex] ? middleIndex : 
+//         numSearch > userArray[middleIndex] ?
+//             BinarySearchIndex(userArray, numSearch, middleIndex + 1, indexEnd) :
+//             BinarySearchIndex(userArray, numSearch, indexStart, middleIndex - 1);
+// }
+// // [0,4] 5 ищем
+// int[] userMassiv = { 1, 4, 5, 7, 8, 9, 22, 23, 25, 33, 39, 44, 46, 55, 88, 99 };
+// // int[] userMassiv = { 0, 4 };
+// int number = Convert.ToInt32(Console.ReadLine());
+// int index = BinarySearchIndex(userMassiv, number, 0, userMassiv.Length - 1);
+// System.Console.WriteLine(index);
