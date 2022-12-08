@@ -47,7 +47,8 @@
         {
             System.Console.WriteLine("Введите почтовый адрес");
             string? mail = Console.ReadLine();
-            System.Console.WriteLine(Mail(mail, out bool result, out string domen));
+            Mail(mail, out bool result, out string domen);
+            System.Console.WriteLine($"{result},{domen}");
         }
         static string Mail(string mail, out bool result, out string domen)
         {
