@@ -5,9 +5,9 @@
         static void Main(string[] args)
         {
             // Task1();
-            // Task2();
+            Task2();
             // Task3();
-            Task4();
+            // Task4();
             // Task5();
             // Task6();
             // Task7();
@@ -47,12 +47,13 @@
         {
             System.Console.WriteLine("Введите почтовый адрес");
             string? mail = Console.ReadLine();
-            Mail(mail, out bool result, out string domen);
-            System.Console.WriteLine($"{result},{domen}");
+            System.Console.WriteLine(Mail(mail, out string domen));
+            System.Console.WriteLine(domen);
         }
-        static string Mail(string mail, out bool result, out string domen)
+        static bool Mail(string mail, out string domen)
         {
             domen = "";
+            bool result = false;
             if (mail.EndsWith("@gmail.com"))
             {
                 result = true;
@@ -73,8 +74,7 @@
                 result = false;
                 domen = "";
             }
-            return result.ToString();
-            return domen;
+            return result;
         }
         #endregion
         #region Task3
@@ -136,7 +136,7 @@
             string separator = Console.ReadLine();
         }
         #endregion
-        
+
         #region Task6
         // 6. Написать метод возвращающий разность между найбольшим и наименьшим значением из списка. Результат разности возращать через out, метод для поиска минимального и максимального написать с использованием params
 
