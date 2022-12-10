@@ -177,3 +177,4 @@
 // int number = Convert.ToInt32(Console.ReadLine());
 // int index = BinarySearchIndex(userMassiv, number, 0, userMassiv.Length - 1);
 // System.Console.WriteLine(index);
+
