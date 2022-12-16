@@ -49,6 +49,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             int resultMax = 0;
             int resultMin = 0;
             NumberMaxMin(array1, out resultMax, out resultMin);
+            System.Console.WriteLine(NumberMaxMinOverflow(array1));
         }
         static void NumberMaxMin(int[] array, out int resultMin, out int resultMax)
         {
@@ -70,6 +71,27 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 }
             }
             System.Console.WriteLine($"Индекс минимального значения {resultMin}, индекс максимального значения {resultMax}");
+        }
+        static (int, int) NumberMaxMinOverflow(int[] array)
+        {
+            int min = array[0];
+            int max = min;
+            int resultMin = 0;
+            int resultMax = 0;
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] < min)
+                {
+                    min = array[i];
+                    resultMin = i;
+                }
+                if (array[i] > max)
+                {
+                    max = array[i];
+                    resultMax = i;
+                }
+            }
+            return (resultMin, resultMax);
         }
         #endregion
     }
