@@ -10,8 +10,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // Task2();
             // Task3();
             // Task4();
-            Task5();
-            // Task6();
+            // Task5();
+            Task6();
             // Task7();
 
         }
@@ -92,6 +92,26 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 }
             }
             return (resultMin, resultMax);
+        }
+        #endregion
+        #region Task6
+        static void Task6()
+        {
+            // 6. На входе 2 числа, написать метод по замене местами чисел в переменных, если первое число кратно двум, второе не кратно 
+            // и первое число меньше второго (результат вернуть в виде кортежа)
+            int number1 = 4;
+            int number2 = 5;
+            System.Console.WriteLine(ChangeNumbers(number1, number2));
+        }
+        static (int, int) ChangeNumbers(int number1, int number2)
+        {
+            int result = number1;
+            if (number1 % 2 == 0 && number2 % 2 != 0 && number1 < number2)
+            {
+                number1 = number2;
+                number2 = result;
+            }
+            return (number1, number2);
         }
         #endregion
     }
