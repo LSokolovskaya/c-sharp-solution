@@ -474,7 +474,7 @@ internal class Program
     {
         string number1 = "";
         while (number >= 1)
-        {
+        {1
             int ostatok = number % array.Length;
             number1 += array[ostatok];
             number /= array.Length;

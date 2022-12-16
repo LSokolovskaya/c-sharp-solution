@@ -218,44 +218,43 @@
         static void Task8()
         {
             string number2 = "1111";
-            number16 = "";
-            Method16(number2,out string number16, out string result);
+            string number16 = "";
+            Method16(number2,out number16, out string result);
             System.Console.WriteLine($"{result}, {number16}");
         }
         static string Method16(string number2, out string number16, out string result)
         {
             number16 = "0";
             result = "true";
-            double number = 0;
             for (int i = Convert.ToString(number2).Length - 1; i >= 0; i--)
             {
                 if (number2[i] == '1')
                 {
                     result = "true";
-                    number = Convert.ToDouble(number16) + Math.Pow(2, i);
-                    if (Convert.ToDouble(number) > 9)
+                    number16 = Convert.ToString(Convert.ToDouble(number16) + Math.Pow(2, i));
+                    if (Convert.ToInt32(number16) > 9)
                     {
-                        if (Convert.ToDouble(number) == 10)
+                        if (number16 == "10")
                         {
                             number16 = "A";
                         }
-                        else if (Convert.ToDouble(number) == 11)
+                        else if (number16 == "11")
                         {
                             number16 = "B";
                         }
-                        else if (Convert.ToDouble(number) == 12)
+                        else if (number16 == "12")
                         {
                             number16 = "C";
                         }
-                        else if (Convert.ToDouble(number) == 13)
+                        else if (number16 == "13")
                         {
                             number16 = "D";
                         }
-                        else if (Convert.ToDouble(number) == 14)
+                        else if (number16 == "14")
                         {
                             number16 = "E";
                         }
-                        else if (Convert.ToDouble(number) == 15)
+                        else if (number16 == "15")
                         {
                             number16 = "F";
                         }
