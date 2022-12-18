@@ -129,3 +129,47 @@ namespace MyApp // Note: actual namespace depends on the project name.
 // и первое число меньше двух (результат вернуть в виде кортежа)
 // 7. Дана строка. Написать метод по подсчёту количеству вхождений символа (подстроки). Метод возвращает символ (подстроку),
 //  количество вхождений, перое и последнее вхождение в строку. (использовать IndexOf, LastIndexOf, Split и тд запрещено)
+
+
+static void Task3()
+    {
+        int number = Convert.ToInt32(Console.ReadLine());
+        NumberDivider(number);
+        // Console.WriteLine(IsNumSim(number, number / 2));
+    }
+    static void NumberDivider(int n)
+    {
+        if (n > 1)
+        {
+            NumberAraySimp(2, n);
+        }
+        else
+        {
+            Console.WriteLine("error input");
+        }
+    }
+    
+    static int NumberAraySimp(int num, int n)
+    {
+        if (num > n / 2)
+        {
+            return n;
+        }
+        if (n % num == 0 && IsNumSim(num, num / 2))
+        {
+            Console.Write($"{num} ");
+        }
+        return NumberAraySimp(num + 1, n);
+    }
+       static bool IsNumSim(int num, int dif)
+    {
+        if (dif <= 1)
+        {
+            return true;
+        }
+        else if (num % dif == 0)
+        {
+            return false;
+        }
+        return IsNumSim(num, dif - 1);
+    }
