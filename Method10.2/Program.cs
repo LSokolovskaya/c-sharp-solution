@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Task1();
+            // Task1();
             // Task2();
-            // Task3();
+            Task3();
             // Task4();
         }
         #region Task1
@@ -50,7 +50,29 @@
         #region Task3
         // 3. Написать метод увеличению размера массива и заполнения его значениями
         // В задаче использовать необязательные парметры, локальные методы.
-
+        static void Task3()
+        {
+            int[] array1 = new int[1] { 4 };
+            int[] array2 = new int[3] { 12, 4, 4 };
+            int[] arrayResult = new int[4];
+            ArrayRise(array1, array2, arrayResult);
+            System.Console.WriteLine(string.Join(',', arrayResult));
+        }
+        static int[] ArrayRise(int[] array1, int[] array2, int[] arrayResult, int arrayLength = 1, int arrayLength1 = 3)
+        {
+            Arraynew();
+            int[] Arraynew()
+            {
+                Array.Copy(array1, arrayResult, array1.Length);
+                array1.CopyTo(arrayResult, 1);
+                System.Console.WriteLine(arrayResult[0]);
+                System.Console.WriteLine(arrayResult[1]);
+                System.Console.WriteLine(arrayResult[2]);
+                System.Console.WriteLine(arrayResult[3]);
+                return arrayResult;
+            }
+            return arrayResult;
+        }
         #endregion
         #region Task4
         // 4. Написать метод по расчету корней квадратного уравнения с использованием
