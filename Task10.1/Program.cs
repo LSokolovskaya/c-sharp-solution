@@ -214,60 +214,23 @@
         }
         #endregion
         #region Task8
-        // 8. На входе метода набор 0 и 1 перевести в 16-ную систему счисления (params)
         static void Task8()
         {
-            string number2 = "1111";
-            string number16 = "";
-            Method16(number2,out number16, out string result);
-            System.Console.WriteLine($"{result}, {number16}");
+            object[] array16 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F" };
+            object[] array2 = { 0, 1 };
+            int number = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine($"Двоичная система = {MethodConvert(number, array2)}, шеснадцатиричная система = {MethodConvert(number, array16)}");
         }
-        static string Method16(string number2, out string number16, out string result)
+        static string MethodConvert(int number, params object[] array)
         {
-            number16 = "0";
-            result = "true";
-            for (int i = Convert.ToString(number2).Length - 1; i >= 0; i--)
+            string number1 = "";
+            while (number >= 1)
             {
-                if (number2[i] == '1')
-                {
-                    result = "true";
-                    number16 = Convert.ToString(Convert.ToDouble(number16) + Math.Pow(2, i));
-                    if (Convert.ToInt32(number16) > 9)
-                    {
-                        if (number16 == "10")
-                        {
-                            number16 = "A";
-                        }
-                        else if (number16 == "11")
-                        {
-                            number16 = "B";
-                        }
-                        else if (number16 == "12")
-                        {
-                            number16 = "C";
-                        }
-                        else if (number16 == "13")
-                        {
-                            number16 = "D";
-                        }
-                        else if (number16 == "14")
-                        {
-                            number16 = "E";
-                        }
-                        else if (number16 == "15")
-                        {
-                            number16 = "F";
-                        }
-                    }
-                }
-                else if (Convert.ToChar(number2[i]) != '1' || number2[i] != '0')
-                {
-                    result = "false";
-                    number16 = "";
-                }
+                int ostatok = number % array.Length;
+                number1 += array[ostatok];
+                number /= array.Length;
             }
-            return result;
-            return number16;
+            return number1;
         }
         #endregion
     }
