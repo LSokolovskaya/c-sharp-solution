@@ -54,7 +54,7 @@
         {
             int[] array1 = new int[1] { 4 };
             int[] array2 = new int[3] { 12, 4, 4 };
-            int[] arrayResult = new int[4];
+            int[] arrayResult = new int[8];
             ArrayRise(array1, array2, arrayResult);
             System.Console.WriteLine(string.Join(',', arrayResult));
         }
